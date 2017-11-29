@@ -7,7 +7,7 @@
 
 #include <unordered_map>
 
-#include "RPGStat.hpp"
+#include "../Stat/RPGStat.hpp"
 
 namespace RPGStatSystem {
 

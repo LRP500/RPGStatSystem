@@ -7,8 +7,8 @@
 
 #include <list>
 
-#include "RPGStat.hpp"
-#include "IStatModifiable.hpp"
+#include "../Stat/RPGStat.hpp"
+#include "../Interface/IStatModifiable.hpp"
 
 namespace RPGStatSystem {
 
