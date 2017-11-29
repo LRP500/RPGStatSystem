@@ -16,7 +16,8 @@ namespace RPGStatSystem {
             Health = 1,
             Strength = 2,
             Agility = 3,
-            Count = Agility
+            Stamina = 4,
+            Count = Stamina
         };
 
     protected:
@@ -38,7 +39,8 @@ namespace RPGStatSystem {
     static const RPGStat::Type Stats[STAT_TYPE_COUNT] = {
             RPGStat::Type::Health,
             RPGStat::Type::Strength,
-            RPGStat::Type::Agility
+            RPGStat::Type::Agility,
+            RPGStat::Type::Stamina
     };
 
 }

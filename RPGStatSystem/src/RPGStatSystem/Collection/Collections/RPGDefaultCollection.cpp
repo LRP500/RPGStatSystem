@@ -3,7 +3,8 @@
 //
 
 #include "RPGDefaultCollection.hpp"
-#include "../RPGStatModifiable.hpp"
+#include "../../Modifier/RPGStatModifiable.hpp"
+#include "../../Attribute/RPGAttribute.hpp"
 
 RPGStatSystem::RPGDefaultCollection::RPGDefaultCollection()
 {
@@ -25,4 +26,8 @@ void RPGStatSystem::RPGDefaultCollection::configureStats()
     auto agility = getOrCreate<RPGStatModifiable>(RPGStat::Type::Agility);
     agility->setName("Agility");
     agility->setValue(5);
+
+    auto stamina = getOrCreate<RPGAttribute>(RPGStat::Type::Stamina);
+    stamina->setName("Stamina");
+    stamina->setValue(8);
 }

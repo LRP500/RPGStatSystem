@@ -5,7 +5,7 @@
 #ifndef RPGSTATSYSTEM_ISTATMODIFIABLE_HPP
 #define RPGSTATSYSTEM_ISTATMODIFIABLE_HPP
 
-#include "RPGStatModifier.hpp"
+#include "../Modifier/RPGStatModifier.hpp"
 
 namespace RPGStatSystem {
 
