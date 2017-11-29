@@ -43,10 +43,10 @@ RM = "/Applications/CLion 2017.3 EAP.app/Contents/bin/cmake/bin/cmake" -E remove
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/LRP/ClionProjects/RPGStatSystem
+CMAKE_SOURCE_DIR = /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/RPGStatSystem.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/RPGStatSystem.dir/flags.make
 
 CMakeFiles/RPGStatSystem.dir/src/main.cpp.o: CMakeFiles/RPGStatSystem.dir/flags.make
 CMakeFiles/RPGStatSystem.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/main.cpp.o -c /Users/LRP/ClionProjects/RPGStatSystem/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/main.cpp.o -c /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/main.cpp
 
 CMakeFiles/RPGStatSystem.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RPGStatSystem.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/ClionProjects/RPGStatSystem/src/main.cpp > CMakeFiles/RPGStatSystem.dir/src/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/main.cpp > CMakeFiles/RPGStatSystem.dir/src/main.cpp.i
 
 CMakeFiles/RPGStatSystem.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RPGStatSystem.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/ClionProjects/RPGStatSystem/src/main.cpp -o CMakeFiles/RPGStatSystem.dir/src/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/main.cpp -o CMakeFiles/RPGStatSystem.dir/src/main.cpp.s
 
 CMakeFiles/RPGStatSystem.dir/src/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/RPGStatSystem.dir/src/main.cpp.o.provides.build: CMakeFiles/RPGStatSy
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.o: CMakeFiles/RPGStatSystem.dir/flags.make
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.o: ../src/RPGStatSystem/RPGStat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.o -c /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.o -c /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStat.cpp
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStat.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStat.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.i
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStat.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStat.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.s
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStat.cpp.o.provides.build: CMa
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.o: CMakeFiles/RPGStatSystem.dir/flags.make
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.o: ../src/RPGStatSystem/RPGStatCollection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.o -c /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStatCollection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.o -c /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStatCollection.cpp
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStatCollection.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStatCollection.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.i
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStatCollection.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStatCollection.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.s
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatCollection.cpp.o.provides.
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.o: CMakeFiles/RPGStatSystem.dir/flags.make
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.o: ../src/RPGStatSystem/Collections/RPGDefaultCollection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.o -c /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.o -c /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.i
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.s
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/Collections/RPGDefaultCollection.
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.o: CMakeFiles/RPGStatSystem.dir/flags.make
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.o: ../src/RPGStatSystem/RPGStatModifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.o -c /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStatModifier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.o -c /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStatModifier.cpp
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStatModifier.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStatModifier.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.i
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStatModifier.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStatModifier.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.s
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifier.cpp.o.provides.bu
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.o: CMakeFiles/RPGStatSystem.dir/flags.make
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.o: ../src/RPGStatSystem/IStatModifiable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.o -c /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/IStatModifiable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.o -c /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/IStatModifiable.cpp
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/IStatModifiable.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/IStatModifiable.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.i
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/IStatModifiable.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/IStatModifiable.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.s
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cpp.o.provides.bu
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.o: CMakeFiles/RPGStatSystem.dir/flags.make
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.o: ../src/RPGStatSystem/RPGStatModifiable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.o -c /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStatModifiable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.o -c /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStatModifiable.cpp
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStatModifiable.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStatModifiable.cpp > CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.i
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/ClionProjects/RPGStatSystem/src/RPGStatSystem/RPGStatModifiable.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/src/RPGStatSystem/RPGStatModifiable.cpp -o CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.s
 
 CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.o.requires:
 
@@ -247,7 +247,7 @@ RPGStatSystem: CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/IStatModifiable.cp
 RPGStatSystem: CMakeFiles/RPGStatSystem.dir/src/RPGStatSystem/RPGStatModifiable.cpp.o
 RPGStatSystem: CMakeFiles/RPGStatSystem.dir/build.make
 RPGStatSystem: CMakeFiles/RPGStatSystem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable RPGStatSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable RPGStatSystem"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RPGStatSystem.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -270,6 +270,6 @@ CMakeFiles/RPGStatSystem.dir/clean:
 .PHONY : CMakeFiles/RPGStatSystem.dir/clean
 
 CMakeFiles/RPGStatSystem.dir/depend:
-	cd /Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/LRP/ClionProjects/RPGStatSystem /Users/LRP/ClionProjects/RPGStatSystem /Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug /Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug /Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/CMakeFiles/RPGStatSystem.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/CMakeFiles/RPGStatSystem.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RPGStatSystem.dir/depend
 

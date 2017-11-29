@@ -1,4 +1,4 @@
-# Install script for directory: /Users/LRP/ClionProjects/RPGStatSystem
+# Install script for directory: /Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/LRP/ClionProjects/RPGStatSystem/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
