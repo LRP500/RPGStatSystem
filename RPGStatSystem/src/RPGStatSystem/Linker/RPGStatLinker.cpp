@@ -3,3 +3,7 @@
 //
 
 #include "RPGStatLinker.hpp"
+
+RPGStatSystem::RPGStatLinker::RPGStatLinker(RPGStatSystem::RPGStat* stat)
+        : m_stat(stat)
+{}

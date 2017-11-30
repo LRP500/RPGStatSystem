@@ -20,11 +20,11 @@ namespace RPGStatSystem {
     public:
         RPGStatModifiable();
 
-        int getValue() const { return RPGStat::getBaseValue() + m_modValue; }
+        int getValue() const override { return RPGStat::getValue() + m_modValue; }
         int getModifierValue() const override { return m_modValue; }
 
         // Interface Overrides
-        void addModifier(RPGStatModifier mod) override;
+        void addModifier(const RPGStatModifier& mod) override;
         void clearModifiers() override;
         void updateModifiers() override;
     };

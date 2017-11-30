@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "RPGStatSystem/Collection/collections/RPGDefaultCollection.hpp"
+#include "RPGStatSystem/Collection/Collections/RPGDefaultCollection.hpp"
 #include "RPGStatSystem/Modifier/RPGStatModifiable.hpp"
 #include "RPGStatSystem/Interface/IStatScalable.hpp"
 #include "RPGStatSystem/Attribute/RPGAttribute.hpp"
@@ -12,7 +12,7 @@ int main()
     auto *defaultStats = new RPGStatSystem::RPGDefaultCollection();
 
     // Testing Base Stat
-    std::cout << "Testing Base Stat\n=================" << std::endl;
+    std::cout << "Base Stats\n=================" << std::endl;
     for (const RPGStatSystem::RPGStat::Type& type : RPGStatSystem::Stats) {
         auto stat = defaultStats->getStat<RPGStatSystem::RPGStatModifiable>(type);
         if (stat)
@@ -20,30 +20,37 @@ int main()
     }
 
     // Testing modifier
-    std::cout << "\nTesting Modifier\n================" << std::endl;
-    auto health = defaultStats->getStat<RPGStatModifiable>(RPGStat::Type::Health);
-    health->addModifier(RPGStatModifier(RPGStat::Type::Health, RPGStatModifier::Type::BaseValueAdd, 10.0));
-    health->updateModifiers();
-    std::cout << "Add " << health->getModifierValue() << " to health base value" << "\n";
+    std::cout << "\nStat Modifiers\n================" << std::endl;
+    auto agility = defaultStats->getStat<RPGAttribute>(RPGStat::Type::Agility);
+    agility->addModifier(RPGStatModifier(RPGStat::Type::Agility, RPGStatModifier::Type::BaseValueAdd, 100.0));
+    agility->updateModifiers();
+    std::cout << "Add " << agility->getModifierValue() << " to agility base value" << "\n";
 
     auto strength = defaultStats->getStat<RPGStatModifiable>(RPGStat::Type::Strength);
-    strength->addModifier(RPGStatModifier(RPGStat::Type::Strength, RPGStatModifier::Type::BaseValuePercent, 1.0));
+    strength->addModifier(RPGStatModifier(RPGStat::Type::Strength, RPGStatModifier::Type::BaseValuePercent, 10.0));
     strength->updateModifiers();
-    std::cout << "Add Percentage 1.0 (100%) to " << strength->getName() << "\n";
+    std::cout << "Add Percentage 10.0 (1000%) to " << strength->getName() << "\n";
 
-    std::cout << "[" << health->getName() << "=" << health->getValue() << "]" << std::endl;
+    std::cout << "[" << agility->getName() << "=" << agility->getValue() << "]" << std::endl;
     std::cout << "[" << strength->getName() << "=" << strength->getValue() << "]" << std::endl;
 
     // Testing scalability & interface implementation
-    std::cout << "\nTesting Scalability\n===================" << std::endl;
-    auto stamina = defaultStats->getStat<RPGStatSystem::RPGAttribute>(RPGStat::Type::Stamina);
+    std::cout << "\nStat Scalables\n===================" << std::endl;
 
-    if (dynamic_cast<IStatScalable *>(stamina))
+    if (dynamic_cast<IStatScalable *>(agility))
         std::cout << "IStatScalable correctly implemented" << std::endl;
     
-    std::cout << "Scale stamina to level 12" << std::endl;
-    stamina->scaleToLevel(12);
-    std::cout << "[" << stamina->getName() << "=" << stamina->getBaseValue() << "]" << std::endl;
+    std::cout << "Scale agility to level 12" << std::endl;
+    agility->scaleToLevel(12);
+    std::cout << "[" << agility->getName() << "=" << agility->getBaseValue() << "]" << std::endl;
+
+    // Testing Linkers
+    std::cout << "\nStat Linkers\n===================" << std::endl;
+    for (const RPGStatSystem::RPGStat::Type& type : RPGStatSystem::Stats) {
+        auto stat = defaultStats->getStat<RPGStatSystem::RPGAttribute>(type);
+        if (stat)
+            std::cout << "[" << stat->getName() << "=" << stat->getBaseValue() << "]" << std::endl;
+    }
 
     return 0;
 }
