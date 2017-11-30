@@ -2,16 +2,16 @@
 // Created by Pierre Roy on 28/11/17.
 //
 
-#include "RPGDefaultCollection.hpp"
+#include "RPGDefaultStatCollection.hpp"
 #include "../../Modifier/RPGStatModifiable.hpp"
 #include "../../Attribute/RPGAttribute.hpp"
 
-RPGStatSystem::RPGDefaultCollection::RPGDefaultCollection()
+RPGStatSystem::RPGDefaultStatCollection::RPGDefaultStatCollection()
 {
     configureStats();
 }
 
-void RPGStatSystem::RPGDefaultCollection::configureStats()
+void RPGStatSystem::RPGDefaultStatCollection::configureStats()
 {
     RPGStatCollection::configureStats();
 

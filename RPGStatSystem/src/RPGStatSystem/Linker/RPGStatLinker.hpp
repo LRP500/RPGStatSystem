@@ -1,0 +1,14 @@
+//
+// Created by Pierre Roy on 29/11/17.
+//
+
+#ifndef RPGSTATSYSTEM_RPGSTATLINKER_HPP
+#define RPGSTATSYSTEM_RPGSTATLINKER_HPP
+
+
+class RPGStatLinker {
+
+};
+
+
+#endif //RPGSTATSYSTEM_RPGSTATLINKER_HPP
