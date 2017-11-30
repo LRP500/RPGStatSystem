@@ -17,7 +17,9 @@ namespace RPGStatSystem {
             Strength = 2,
             Agility = 3,
             Stamina = 4,
-            Count = Stamina
+            Intelligence = 5,
+            Mana = 6,
+            Count = Mana
         };
 
     protected:
@@ -29,9 +31,10 @@ namespace RPGStatSystem {
         virtual ~RPGStat() = default;
 
     public:
-        const std::string& getName() const { return m_name; };
+        const std::string& getName() const { return m_name; }
         void setName(const std::string& name) { m_name = name; }
-        virtual int getBaseValue() const { return m_baseValue; };
+        virtual int getValue() const { return m_baseValue; }
+        virtual int getBaseValue() const { return m_baseValue; }
         void setValue(int value) { m_baseValue = value; }
     };
 
@@ -40,7 +43,9 @@ namespace RPGStatSystem {
             RPGStat::Type::Health,
             RPGStat::Type::Strength,
             RPGStat::Type::Agility,
-            RPGStat::Type::Stamina
+            RPGStat::Type::Stamina,
+            RPGStat::Type::Intelligence,
+            RPGStat::Type::Mana
     };
 
 }

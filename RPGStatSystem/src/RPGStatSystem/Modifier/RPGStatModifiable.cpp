@@ -6,10 +6,12 @@
 
 #include "RPGStatModifiable.hpp"
 
-RPGStatSystem::RPGStatModifiable::RPGStatModifiable() : RPGStat(), m_modValue(0)
+RPGStatSystem::RPGStatModifiable::RPGStatModifiable()
+        : RPGStat(),
+          m_modValue(0)
 {}
 
-void RPGStatSystem::RPGStatModifiable::addModifier(RPGStatModifier mod)
+void RPGStatSystem::RPGStatModifiable::addModifier(const RPGStatModifier& mod)
 {
     m_mods.emplace_back(mod);
 }

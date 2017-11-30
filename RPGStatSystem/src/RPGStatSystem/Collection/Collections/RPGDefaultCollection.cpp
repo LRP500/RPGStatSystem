@@ -5,6 +5,7 @@
 #include "RPGDefaultCollection.hpp"
 #include "../../Modifier/RPGStatModifiable.hpp"
 #include "../../Attribute/RPGAttribute.hpp"
+#include "../../Linker/Linkers/RPGRatioLinker.hpp"
 
 RPGStatSystem::RPGDefaultCollection::RPGDefaultCollection()
 {
@@ -15,19 +16,34 @@ void RPGStatSystem::RPGDefaultCollection::configureStats()
 {
     RPGStatCollection::configureStats();
 
-    auto health = getOrCreate<RPGStatModifiable>(RPGStat::Type::Health);
-    health->setName("Health");
-    health->setValue(15);
-
-    auto strength = getOrCreate<RPGStatModifiable>(RPGStat::Type::Strength);
+    auto strength = getOrCreate<RPGAttribute>(RPGStat::Type::Strength);
     strength->setName("Strength");
     strength->setValue(5);
+    // Link To
+    auto health = getOrCreate<RPGAttribute>(RPGStat::Type::Health);
+    health->setName("Health");
+    health->setValue(15);
+    health->addLinker(new RPGRatioLinker(getOrCreate<RPGAttribute>(RPGStat::Type::Strength), 10.0f));
 
-    auto agility = getOrCreate<RPGStatModifiable>(RPGStat::Type::Agility);
+    auto agility = getOrCreate<RPGAttribute>(RPGStat::Type::Agility);
     agility->setName("Agility");
     agility->setValue(5);
-
+    // Link To
     auto stamina = getOrCreate<RPGAttribute>(RPGStat::Type::Stamina);
     stamina->setName("Stamina");
-    stamina->setValue(8);
+    stamina->setValue(10);
+    stamina->addLinker(new RPGRatioLinker(getOrCreate<RPGAttribute>(RPGStat::Type::Agility), 10.0f));
+    stamina->updateLinkers();
+
+    auto intel = getOrCreate<RPGAttribute>(RPGStat::Type::Intelligence);
+    intel->setName("Intelligence");
+    intel->setValue(5);
+    // Link To
+    auto mana = getOrCreate<RPGAttribute>(RPGStat::Type::Mana);
+    mana->setName("Mana");
+    mana->setValue(10);
+    mana->addLinker(new RPGRatioLinker(getOrCreate<RPGAttribute>(RPGStat::Type::Intelligence), 2.0f));
+    mana->updateLinkers();
+
+
 }
