@@ -4,6 +4,7 @@
 #include "RPGStatSystem/Modifier/RPGStatModifiable.hpp"
 #include "RPGStatSystem/Interface/IStatScalable.hpp"
 #include "RPGStatSystem/Attribute/RPGAttribute.hpp"
+#include "RPGStatSystem/Vital/RPGVital.hpp"
 
 using namespace RPGStatSystem;
 
@@ -51,6 +52,11 @@ int main()
         if (stat)
             std::cout << "[" << stat->getName() << "=" << stat->getBaseValue() << "]" << std::endl;
     }
+
+    // Testing Events
+    std::cout << "\nEvent Handling\n===================" << std::endl;
+    auto health = defaultStats->getStat<RPGVital>(RPGStat::Type::Health);
+    health->setCurrentValue(25);
 
     return 0;
 }

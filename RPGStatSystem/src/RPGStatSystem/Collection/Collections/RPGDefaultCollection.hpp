@@ -7,14 +7,20 @@
 
 #include "../RPGStatCollection.hpp"
 
+#include "../../Event/EventHandler.hpp" // TODO Delete
+
 namespace RPGStatSystem {
 
     class RPGDefaultCollection : public RPGStatCollection {
+    private:
+        Signal::EventHandler m_eh;
+
     public:
         RPGDefaultCollection();
 
     private:
         void configureStats() override;
+
     };
 
 }
