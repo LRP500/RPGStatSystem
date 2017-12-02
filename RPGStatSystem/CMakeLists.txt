@@ -12,4 +12,4 @@ add_executable(RPGStatSystem
         src/RPGStatSystem/Interface/IStatModifiable.hpp
         src/RPGStatSystem/Modifier/RPGStatModifiable.cpp src/RPGStatSystem/Modifier/RPGStatModifiable.hpp
         src/RPGStatSystem/Interface/IStatScalable.hpp
-        src/RPGStatSystem/Attribute/RPGAttribute.cpp src/RPGStatSystem/Attribute/RPGAttribute.hpp src/RPGStatSystem/Linker/RPGStatLinker.cpp src/RPGStatSystem/Linker/RPGStatLinker.hpp src/RPGStatSystem/Linker/Linkers/RPGRatioLinker.cpp src/RPGStatSystem/Linker/Linkers/RPGRatioLinker.hpp src/RPGStatSystem/Interface/IStatLinkable.hpp)
+        src/RPGStatSystem/Attribute/RPGAttribute.cpp src/RPGStatSystem/Attribute/RPGAttribute.hpp src/RPGStatSystem/Linker/RPGStatLinker.cpp src/RPGStatSystem/Linker/RPGStatLinker.hpp src/RPGStatSystem/Linker/Linkers/RPGRatioLinker.cpp src/RPGStatSystem/Linker/Linkers/RPGRatioLinker.hpp src/RPGStatSystem/Interface/IStatLinkable.hpp src/RPGStatSystem/Vital/RPGVital.cpp src/RPGStatSystem/Vital/RPGVital.hpp)
