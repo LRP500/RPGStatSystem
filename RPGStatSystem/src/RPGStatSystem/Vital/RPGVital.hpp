@@ -6,13 +6,16 @@
 #define RPGSTATSYSTEM_RPGVITAL_HPP
 
 #include "../Attribute/RPGAttribute.hpp"
+#include "../Event/Event.hpp"
 
 namespace RPGStatSystem
 {
-
     class RPGVital : public RPGAttribute {
     private:
         int m_currentValue {0};
+
+    public:
+        Signal::Event<const RPGVital&> CurrentValueChange;
 
     public:
         RPGVital();
@@ -22,6 +25,8 @@ namespace RPGStatSystem
 
         int getCurrentValue() const;
         int getCurrentValue();
+
+        void triggerCurrentValueChange();
     };
 
 }

@@ -7,8 +7,10 @@
 #include "RPGStatCollection.hpp"
 #include "../Modifier/RPGStatModifiable.hpp"
 #include "../Attribute/RPGAttribute.hpp"
+#include "../Vital/RPGVital.hpp"
 
 using RPGStatSystem::RPGStat;
+using RPGStatSystem::RPGVital;
 using RPGStatSystem::RPGAttribute;
 using RPGStatSystem::RPGStatModifiable;
 using RPGStatSystem::RPGStatCollection;
@@ -48,11 +50,14 @@ bool RPGStatCollection::contains(RPGStat::Type type) const
 template RPGStat* RPGStatCollection::getStat<RPGStat>(RPGStat::Type type);
 template RPGStatModifiable* RPGStatCollection::getStat<RPGStatModifiable>(RPGStat::Type type);
 template RPGAttribute* RPGStatCollection::getStat<RPGAttribute>(RPGStat::Type type);
+template RPGVital* RPGStatCollection::getStat<RPGVital>(RPGStat::Type type);
 
 template RPGStat* RPGStatCollection::createStat<RPGStat>(RPGStat::Type type);
 template RPGStatModifiable* RPGStatCollection::createStat<RPGStatModifiable>(RPGStat::Type type);
 template RPGAttribute* RPGStatCollection::createStat<RPGAttribute>(RPGStat::Type type);
+template RPGVital* RPGStatCollection::createStat<RPGVital>(RPGStat::Type type);
 
 template RPGStat* RPGStatCollection::getOrCreate<RPGStat>(RPGStat::Type type);
 template RPGStatModifiable* RPGStatCollection::getOrCreate<RPGStatModifiable>(RPGStat::Type type);
 template RPGAttribute* RPGStatCollection::getOrCreate<RPGAttribute>(RPGStat::Type type);
+template RPGVital* RPGStatCollection::getOrCreate<RPGVital>(RPGStat::Type type);

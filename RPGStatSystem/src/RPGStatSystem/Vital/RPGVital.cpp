@@ -2,6 +2,8 @@
 // Created by Pierre Roy on 02/12/17.
 //
 
+#include <iostream>
+
 #include "RPGVital.hpp"
 
 RPGStatSystem::RPGVital::RPGVital()
@@ -11,7 +13,11 @@ RPGStatSystem::RPGVital::RPGVital()
 
 void RPGStatSystem::RPGVital::setCurrentValue(int value)
 {
-    m_currentValue = value;
+    if (value != m_currentValue)
+    {
+        m_currentValue = value;
+        triggerCurrentValueChange();
+    }
 }
 
 int RPGStatSystem::RPGVital::getCurrentValue() const
@@ -35,6 +41,12 @@ int RPGStatSystem::RPGVital::getCurrentValue()
 void RPGStatSystem::RPGVital::setToMax()
 {
     m_currentValue = getValue();
+}
+
+void RPGStatSystem::RPGVital::triggerCurrentValueChange()
+{
+    // TODO Check if event registered to any delegate
+    CurrentValueChange(*this);
 }
 
 
