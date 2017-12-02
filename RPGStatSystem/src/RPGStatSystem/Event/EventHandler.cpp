@@ -5,11 +5,12 @@
 #include <iostream>
 
 #include "EventHandler.hpp"
+#include "../Vital/RPGVital.hpp"
 
-Signal::EventHandler::EventHandler() : LOnCurrentValueChange(this)
+System::EventHandler::EventHandler() : LOnCurrentValueChange(this)
 {}
 
-void Signal::EventHandler::OnCurrentValueChange(const RPGStatSystem::RPGVital& sender)
+void System::EventHandler::OnCurrentValueChange(const RPGStatSystem::RPGVital& sender)
 {
     if (&sender)
     {

@@ -19,4 +19,4 @@ add_executable(RPGStatSystem
         src/RPGStatSystem/Vital/RPGVital.cpp src/RPGStatSystem/Vital/RPGVital.hpp
         src/RPGStatSystem/Event/EventHandler.cpp src/RPGStatSystem/Event/EventHandler.hpp
         src/RPGStatSystem/Event/Delegate.hpp
-        src/RPGStatSystem/Event/Event.hpp)
+        src/RPGStatSystem/Event/Event.hpp src/RPGStatSystem/Interface/IStatValueEvent.hpp src/RPGStatSystem/Interface/IStatCurrentValueEvent.hpp)
