@@ -5,7 +5,7 @@
 #include "RPGStatModifiable.hpp"
 
 RPGStatSystem::RPGStatModifiable::RPGStatModifiable()
-        : RPGStat(), m_modValue(0), m_eventHandler(new System::EventHandler())
+        : RPGStat(), m_modValue(0)
 {}
 
 void RPGStatSystem::RPGStatModifiable::addModifier(const RPGStatModifier& mod)

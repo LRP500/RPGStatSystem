@@ -13,7 +13,7 @@ namespace RPGStatSystem
 
     class IStatCurrentValueEvent {
     private:
-        System::Event<const RPGStat&> OnCurrentValueChange;
+        System::EventHandler OnCurrentValueChange;
     };
 
 }

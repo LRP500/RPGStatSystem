@@ -7,7 +7,10 @@
 #include "EventHandler.hpp"
 #include "../Vital/RPGVital.hpp"
 
-System::EventHandler::EventHandler() : LOnCurrentValueChange(this)
+System::EventHandler::EventHandler()
+        : LOnCurrentValueChange(this),
+          LOnLinkedStatValueChange(this),
+          LOnLinkerValueChange(this)
 {}
 
 void System::EventHandler::OnCurrentValueChange(const RPGStatSystem::RPGVital& sender)
@@ -16,4 +19,17 @@ void System::EventHandler::OnCurrentValueChange(const RPGStatSystem::RPGVital& s
     {
         std::cout << "Vital " << sender.getName() << "'s OnCurrentValueChange event triggered" << std::endl;
     }
+}
+
+void System::EventHandler::OnLinkedStatValueChange(const RPGStatSystem::RPGStat& sender)
+{
+    if (&sender)
+    {
+        std::cout << sender.getName() << "'s OnLinkedStatValueChange event triggered" << std::endl;
+    }
+}
+
+void System::EventHandler::OnLinkerValueChange(const RPGStatSystem::RPGStat& sender)
+{
+    dynamic_cast<RPGStatSystem::RPGAttribute&>(const_cast<RPGStatSystem::RPGStat&>(sender)).updateLinkers();
 }

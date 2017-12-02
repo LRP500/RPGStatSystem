@@ -16,7 +16,7 @@ namespace RPGStatSystem {
     public:
         RPGRatioLinker(RPGStat* stat, float ratio);
 
-        int getValue() const override { return static_cast<int>(m_stat->getBaseValue() * m_ratio); }
+        int getValue() const override { return static_cast<int>(m_linkedStat->getBaseValue() * m_ratio); }
     };
 
 }

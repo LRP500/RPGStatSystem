@@ -20,7 +20,7 @@ namespace RPGStatSystem {
         std::list<RPGStatLinker*> m_linkers;
 
     public:
-        RPGAttribute() = default;
+        RPGAttribute();
 
         int getlevelValue() const { return m_levelValue; }
 
@@ -28,12 +28,15 @@ namespace RPGStatSystem {
         int getBaseValue() const override;
 
         // Interface IStatScalabler Overrides
-        void scaleToLevel(int level) override { m_levelValue = level; }
+        void scaleToLevel(int level) override;
 
         // Interface IStatLinkable Overrides
         void addLinker(RPGStatLinker* linker) override;
         void clearLinkers() override;
         void updateLinkers() override;
+
+        void removeLinker(RPGStatLinker* linker);
+        void addLiner(RPGStatLinker* linker);
 
         int getLinkerValue() const { return m_linkerValue; }
         int getLinkerValue() override // Effective C++ style const/non-const getter
