@@ -10,13 +10,13 @@
 
 #include "Delegate.hpp"
 
-namespace Signal
+namespace System
 {
 
     template <typename T>
     class Event {
     private:
-        std::vector<Signal::Delegate<T>*> m_delegates;
+        std::vector<System::Delegate<T>*> m_delegates;
 
     public:
         void operator+=(Delegate<T>* delegate);

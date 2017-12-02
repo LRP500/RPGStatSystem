@@ -12,9 +12,6 @@
 namespace RPGStatSystem {
 
     class RPGDefaultCollection : public RPGStatCollection {
-    private:
-        Signal::EventHandler m_eh;
-
     public:
         RPGDefaultCollection();
 

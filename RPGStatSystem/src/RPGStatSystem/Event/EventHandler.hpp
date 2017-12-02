@@ -6,9 +6,13 @@
 #define EVENTHANDLER_EVENTHANDLER_HPP
 
 #include "Delegate.hpp"
-#include "../Vital/RPGVital.hpp"
 
-namespace Signal
+namespace RPGStatSystem
+{
+    class RPGVital;
+}
+
+namespace System
 {
 
     class EventHandler {

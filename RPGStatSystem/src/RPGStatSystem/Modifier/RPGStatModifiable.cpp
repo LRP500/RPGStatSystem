@@ -2,13 +2,10 @@
 // Created by Pierre Roy on 28/11/17.
 //
 
-#include <iostream>
-
 #include "RPGStatModifiable.hpp"
 
 RPGStatSystem::RPGStatModifiable::RPGStatModifiable()
-        : RPGStat(),
-          m_modValue(0)
+        : RPGStat(), m_modValue(0), m_eventHandler(new System::EventHandler())
 {}
 
 void RPGStatSystem::RPGStatModifiable::addModifier(const RPGStatModifier& mod)
@@ -50,5 +47,16 @@ void RPGStatSystem::RPGStatModifiable::updateModifiers()
     }
     m_modValue = static_cast<int>((getBaseValue() * modBaseValuePercent) + modBaseValueAdd);
     m_modValue += (getValue() * modTotalValuePercent) + modTotalValueAdd;
+    triggerValueChange();
 }
 
+System::EventHandler* RPGStatSystem::RPGStatModifiable::getEventHandler() const
+{
+    return m_eventHandler;
+}
+
+void RPGStatSystem::RPGStatModifiable::triggerValueChange()
+{
+    // TODO check if event register to delegate
+    OnValueChange(*this);
+}

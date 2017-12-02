@@ -19,7 +19,7 @@
     };\
     __L##handler##__ L##handler;
 
-namespace Signal
+namespace System
 {
 
     template <typename T>

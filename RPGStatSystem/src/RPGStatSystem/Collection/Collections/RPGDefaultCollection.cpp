@@ -29,7 +29,7 @@ void RPGStatSystem::RPGDefaultCollection::configureStats()
     health->setName("Health");
     health->setValue(15);
     health->addLinker(new RPGRatioLinker(getOrCreate<RPGAttribute>(RPGStat::Type::Strength), 10.0f));
-    health->CurrentValueChange += &m_eh.LOnCurrentValueChange;
+    health->CurrentValueChange += &health->getEventHandler()->LOnCurrentValueChange;
 
     auto agility = getOrCreate<RPGAttribute>(RPGStat::Type::Agility);
     agility->setName("Agility");
