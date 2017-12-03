@@ -7,12 +7,15 @@
 
 #include <list>
 
-#include "../Stat/RPGStat.hpp"
-#include "../Interface/IStatModifiable.hpp"
+#include "../RPGStat.hpp"
+#include "../../Interface/IStatModifiable.hpp"
+#include "../../Interface/IStatValueEvent.hpp"
+#include "../../Event/EventHandler.hpp"
 
-namespace RPGStatSystem {
+namespace RPGStatSystem
+{
 
-    class RPGStatModifiable: public RPGStat, public IStatModifiable {
+    class RPGStatModifiable: public RPGStat, public IStatModifiable, public IStatValueEvent {
     private:
         std::list<RPGStatSystem::RPGStatModifier> m_mods;
         int m_modValue;
@@ -27,6 +30,11 @@ namespace RPGStatSystem {
         void addModifier(const RPGStatModifier& mod) override;
         void clearModifiers() override;
         void updateModifiers() override;
+
+        void triggerValueChange();
+
+        // Implement IStatValueEvent Interface
+        System::EventHandler* getEventHandler() const override;
     };
 
 }

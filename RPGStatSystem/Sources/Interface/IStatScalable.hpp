@@ -5,12 +5,11 @@
 #ifndef RPGSTATSYSTEM_ISTATSCALABLE_HPP
 #define RPGSTATSYSTEM_ISTATSCALABLE_HPP
 
-namespace RPGStatSystem {
+namespace RPGStatSystem
+{
 
     class IStatScalable {
-    public:
-        virtual ~IStatScalable() = default;
-
+    private:
         virtual void scaleToLevel(int level) = 0;
     };
 

@@ -12,6 +12,7 @@ namespace RPGStatSystem {
     class IStatLinkable {
     private:
         virtual void addLinker(RPGStatLinker* linker) = 0;
+        virtual void removeLinker(RPGStatLinker* linker) = 0;
         virtual void clearLinkers() = 0;
         virtual void updateLinkers() = 0;
         virtual int getLinkerValue() = 0;

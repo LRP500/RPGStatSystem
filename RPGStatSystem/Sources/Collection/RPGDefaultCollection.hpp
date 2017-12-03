@@ -5,7 +5,9 @@
 #ifndef RPGSTATSYSTEM_RPGDEFAULTCOLLECTION_HPP
 #define RPGSTATSYSTEM_RPGDEFAULTCOLLECTION_HPP
 
-#include "../RPGStatCollection.hpp"
+#include "RPGStatCollection.hpp"
+
+#include "../Event/EventHandler.hpp" // TODO Delete
 
 namespace RPGStatSystem {
 
@@ -15,6 +17,7 @@ namespace RPGStatSystem {
 
     private:
         void configureStats() override;
+
     };
 
 }
