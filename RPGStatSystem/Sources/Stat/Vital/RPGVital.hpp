@@ -5,9 +5,9 @@
 #ifndef RPGSTATSYSTEM_RPGVITAL_HPP
 #define RPGSTATSYSTEM_RPGVITAL_HPP
 
-#include "../Attribute/RPGAttribute.hpp"
-#include "../Interface/IStatCurrentValueEvent.hpp"
-#include "../Event/Event.hpp"
+#include "../../Stat/Attribute/RPGAttribute.hpp"
+#include "../../Interface/IStatCurrentValueEvent.hpp"
+#include "../../Event/Event.hpp"
 
 namespace RPGStatSystem
 {
@@ -15,9 +15,6 @@ namespace RPGStatSystem
     class RPGVital : public RPGAttribute, public IStatCurrentValueEvent {
     private:
         int m_currentValue {0};
-
-    public:
-        System::Event<const RPGVital&> CurrentValueChange;
 
     public:
         RPGVital();

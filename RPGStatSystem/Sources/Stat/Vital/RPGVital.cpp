@@ -46,7 +46,7 @@ void RPGStatSystem::RPGVital::setToMax()
 void RPGStatSystem::RPGVital::triggerCurrentValueChange()
 {
     // TODO Check if event registered to any delegate
-    CurrentValueChange(*this);
+    OnCurrentValueChange(*this);
 }
 
 

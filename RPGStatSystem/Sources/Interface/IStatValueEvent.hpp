@@ -6,14 +6,21 @@
 #define RPGSTATSYSTEM_ISTATVALUECHANGE_HPP
 
 #include "../Event/Event.hpp"
-#include "../Stat/RPGStat.hpp"
+#include "../Event/EventHandler.hpp"
 
 namespace RPGStatSystem
 {
 
     class IStatValueEvent {
-    protected:
+    public:
+        System::EventHandler* m_eventHandler;
         System::Event<const RPGStat&> OnValueChange;
+
+    public:
+        IStatValueEvent() : m_eventHandler(new System::EventHandler()) {}
+
+    private:
+        virtual System::EventHandler* getEventHandler() const = 0;
     };
 
 }
