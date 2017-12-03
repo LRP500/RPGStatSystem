@@ -1,10 +1,10 @@
 #include <iostream>
 
-#include "RPGStatSystem/Collection/Collections/RPGDefaultCollection.hpp"
-#include "RPGStatSystem/Modifier/RPGStatModifiable.hpp"
-#include "RPGStatSystem/Interface/IStatScalable.hpp"
-#include "RPGStatSystem/Attribute/RPGAttribute.hpp"
-#include "RPGStatSystem/Vital/RPGVital.hpp"
+#include "Collection/RPGDefaultCollection.hpp"
+#include "Stat/Modifiable/RPGStatModifiable.hpp"
+#include "Interface/IStatScalable.hpp"
+#include "Stat/Attribute/RPGAttribute.hpp"
+#include "Stat/Vital/RPGVital.hpp"
 
 using namespace RPGStatSystem;
 
@@ -41,8 +41,8 @@ int main()
     std::cout << "[" << agility->getName() << "=" << agility->getValue() << "]" << std::endl;
     std::cout << "[" << strength->getName() << "=" << strength->getValue() << "]" << std::endl;
 
-    // Testing Linkers
-    std::cout << "\nStat Linkers\n===================" << std::endl;
+    // Testing RatioLinker
+    std::cout << "\nStat RatioLinker\n===================" << std::endl;
     std::cout << stamina->getName() << " linked to agility with ratio of 1.0f" << std::endl;
     std::cout << "[" << agility->getName() << "=" << agility->getBaseValue() << "]" << std::endl;
     std::cout << "[" << stamina->getName() << "=" << stamina->getBaseValue() << "]" << std::endl;
