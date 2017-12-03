@@ -23,6 +23,7 @@ namespace System
         void OnCurrentValueChange(const RPGStatSystem::RPGVital& sender);
         void OnLinkedStatValueChange(const RPGStatSystem::RPGStat& sender);
         void OnLinkerValueChange(const RPGStatSystem::RPGStat& sender);
+
         LISTENER(EventHandler, OnCurrentValueChange, const RPGStatSystem::RPGVital&);
         LISTENER(EventHandler, OnLinkedStatValueChange, const RPGStatSystem::RPGStat&);
         LISTENER(EventHandler, OnLinkerValueChange, const RPGStatSystem::RPGStat&);

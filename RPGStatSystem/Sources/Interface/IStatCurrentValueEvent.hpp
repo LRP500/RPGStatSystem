@@ -12,8 +12,8 @@ namespace RPGStatSystem
 {
 
     class IStatCurrentValueEvent {
-    private:
-        System::EventHandler OnCurrentValueChange;
+    public:
+        System::Event<const RPGVital&> OnCurrentValueChange;
     };
 
 }

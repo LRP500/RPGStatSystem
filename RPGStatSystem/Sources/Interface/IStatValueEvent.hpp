@@ -18,6 +18,8 @@ namespace RPGStatSystem
 
     public:
         IStatValueEvent() : m_eventHandler(new System::EventHandler()) {}
+
+    private:
         virtual System::EventHandler* getEventHandler() const = 0;
     };
 

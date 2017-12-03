@@ -7,9 +7,9 @@
 
 #include <list>
 
-#include "../Interface/IStatScalable.hpp"
-#include "../Interface/IStatLinkable.hpp"
-#include "../Modifier/RPGStatModifiable.hpp"
+#include "../../Interface/IStatScalable.hpp"
+#include "../../Interface/IStatLinkable.hpp"
+#include "../../Stat/Modifiable/RPGStatModifiable.hpp"
 
 namespace RPGStatSystem {
 
@@ -34,9 +34,7 @@ namespace RPGStatSystem {
         void addLinker(RPGStatLinker* linker) override;
         void clearLinkers() override;
         void updateLinkers() override;
-
-        void removeLinker(RPGStatLinker* linker);
-        void addLiner(RPGStatLinker* linker);
+        void removeLinker(RPGStatLinker* linker) override;
 
         int getLinkerValue() const { return m_linkerValue; }
         int getLinkerValue() override // Effective C++ style const/non-const getter

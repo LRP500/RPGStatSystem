@@ -5,9 +5,9 @@
 #include <iostream>
 
 #include "RPGStatCollection.hpp"
-#include "../Modifier/RPGStatModifiable.hpp"
-#include "../Attribute/RPGAttribute.hpp"
-#include "../Vital/RPGVital.hpp"
+#include "../Stat/Modifiable/RPGStatModifiable.hpp"
+#include "../Stat/Attribute/RPGAttribute.hpp"
+#include "../Stat/Vital/RPGVital.hpp"
 
 using RPGStatSystem::RPGStat;
 using RPGStatSystem::RPGVital;

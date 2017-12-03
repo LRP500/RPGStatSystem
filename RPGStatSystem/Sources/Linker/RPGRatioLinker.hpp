@@ -5,7 +5,7 @@
 #ifndef RPGSTATSYSTEM_RPGRATIOSTATLINKER_HPP
 #define RPGSTATSYSTEM_RPGRATIOSTATLINKER_HPP
 
-#include "../RPGStatLinker.hpp"
+#include "RPGStatLinker.hpp"
 
 namespace RPGStatSystem {
 

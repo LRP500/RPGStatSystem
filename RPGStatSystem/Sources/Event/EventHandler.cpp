@@ -5,7 +5,7 @@
 #include <iostream>
 
 #include "EventHandler.hpp"
-#include "../Vital/RPGVital.hpp"
+#include "../Stat/Vital/RPGVital.hpp"
 
 System::EventHandler::EventHandler()
         : LOnCurrentValueChange(this),

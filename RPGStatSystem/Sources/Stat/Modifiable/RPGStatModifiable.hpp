@@ -7,10 +7,10 @@
 
 #include <list>
 
-#include "../Stat/RPGStat.hpp"
-#include "../Interface/IStatModifiable.hpp"
-#include "../Interface/IStatValueEvent.hpp"
-#include "../Event/EventHandler.hpp"
+#include "../RPGStat.hpp"
+#include "../../Interface/IStatModifiable.hpp"
+#include "../../Interface/IStatValueEvent.hpp"
+#include "../../Event/EventHandler.hpp"
 
 namespace RPGStatSystem
 {

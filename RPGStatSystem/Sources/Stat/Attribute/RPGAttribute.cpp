@@ -47,9 +47,3 @@ void RPGStatSystem::RPGAttribute::removeLinker(RPGStatSystem::RPGStatLinker *lin
     m_linkers.remove(linker);
     linker->OnValueChange -= &m_eventHandler->LOnLinkerValueChange;
 }
-
-void RPGStatSystem::RPGAttribute::addLiner(RPGStatSystem::RPGStatLinker *linker)
-{
-    m_linkers.emplace_back(linker);
-    linker->OnValueChange += &m_eventHandler->LOnLinkerValueChange;
-}
