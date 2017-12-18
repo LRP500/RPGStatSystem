@@ -30,29 +30,29 @@ int main()
 
     // Testing modifier
     std::cout << "\nStat Modifiers\n================" << std::endl;
+    if (dynamic_cast<IStatModifiable *>(agility))
+        std::cout << "IStatModifiable correctly implemented" << std::endl;
     agility->addModifier(RPGStatModifier(RPGStat::Type::Agility, RPGStatModifier::Type::BaseValueAdd, 100.0));
     agility->updateModifiers();
     std::cout << "Add " << agility->getModifierValue() << " to agility base value" << "\n";
-
     strength->addModifier(RPGStatModifier(RPGStat::Type::Strength, RPGStatModifier::Type::BaseValuePercent, 10.0));
     strength->updateModifiers();
     std::cout << "Add Percentage 10.0 (1000%) to " << strength->getName() << "\n";
-
     std::cout << "[" << agility->getName() << "=" << agility->getValue() << "]" << std::endl;
     std::cout << "[" << strength->getName() << "=" << strength->getValue() << "]" << std::endl;
 
     // Testing RatioLinker
     std::cout << "\nStat RatioLinker\n===================" << std::endl;
+    if (dynamic_cast<IStatLinkable *>(stamina))
+        std::cout << "IStatLinkable correctly implemented" << std::endl;
     std::cout << stamina->getName() << " linked to agility with ratio of 1.0f" << std::endl;
     std::cout << "[" << agility->getName() << "=" << agility->getBaseValue() << "]" << std::endl;
     std::cout << "[" << stamina->getName() << "=" << stamina->getBaseValue() << "]" << std::endl;
 
     // Testing scalability & interface implementation
     std::cout << "\nStat Scalables\n===================" << std::endl;
-
     if (dynamic_cast<IStatScalable *>(agility))
         std::cout << "IStatScalable correctly implemented" << std::endl;
-
     std::cout << "Scale intelligence to level 12" << std::endl;
     intel->scaleToLevel(12);
     std::cout << "[" << intel->getName() << "=" << intel->getBaseValue() << "]" << std::endl;
