@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RPGStatSystem"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RPGStatSystem">
+				<Option output="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/RPGStatSystem" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 RPGStatSystem"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RPGStatSystem/fast">
+				<Option output="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/RPGStatSystem" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 RPGStatSystem/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Collection/RPGDefaultCollection.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Collection/RPGDefaultCollection.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Collection/RPGStatCollection.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Collection/RPGStatCollection.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Event/Delegate.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Event/Event.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Event/EventHandler.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Event/EventHandler.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Interface/IStatCurrentValueEvent.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Interface/IStatLinkable.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Interface/IStatModifiable.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Interface/IStatScalable.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Interface/IStatValueEvent.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Linker/RPGRatioLinker.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Linker/RPGRatioLinker.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Linker/RPGStatLinker.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Linker/RPGStatLinker.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Modifier/RPGStatModifier.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Modifier/RPGStatModifier.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Stat/Attribute/RPGAttribute.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Stat/Attribute/RPGAttribute.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Stat/Modifiable/RPGStatModifiable.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Stat/Modifiable/RPGStatModifiable.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Stat/RPGStat.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Stat/RPGStat.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Stat/Vital/RPGVital.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/Stat/Vital/RPGVital.hpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/Sources/main.cpp">
+			<Option target="RPGStatSystem"/>
+		</Unit>
+		<Unit filename="/Users/LRP/Documents/Programmation/Game/rpgstatsystem/RPGStatSystem/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
