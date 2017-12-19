@@ -5,10 +5,16 @@
 #include "RPGStatLinker.hpp"
 
 RPGStatSystem::RPGStatLinker::RPGStatLinker(RPGStatSystem::RPGStat* stat)
-        : m_linkedStat(stat)
+        : m_linkedStat(stat), LOnLinkedStatValueChange(this)
 {
-    IStatValueChange* iValueChange = dynamic_cast<IStatValueChange *>(stat);
+    auto iValueChange = dynamic_cast<IStatValueChange *>(stat);
     if (iValueChange)
-        ; // TODO fix
-        //iValueChange->OnValueChange += &m_eventHandler->LOnLinkedStatValueChange;
+        iValueChange->OnValueChange += &LOnLinkedStatValueChange;
+}
+
+void RPGStatSystem::RPGStatLinker::OnLinkedStatValueChange(const RPGStatSystem::RPGStat &sender)
+{
+    // TODO Variadic templates support for Event
+    // this won't work cause OnValueChange currently take RPGStat as 1st argument
+    //OnValueChange(*this);
 }

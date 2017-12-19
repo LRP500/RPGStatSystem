@@ -22,6 +22,9 @@ namespace RPGStatSystem {
 
         RPGStat* getStat() const { return m_linkedStat; }
         virtual int getValue() const { return m_value; }
+
+        void OnLinkedStatValueChange(const RPGStat& sender);
+        LISTENER(RPGStatLinker, OnLinkedStatValueChange, const RPGStat&);
     };
 
 }
