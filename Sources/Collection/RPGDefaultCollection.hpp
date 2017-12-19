@@ -7,8 +7,6 @@
 
 #include "RPGStatCollection.hpp"
 
-#include "../Event/EventHandler.hpp" // TODO Delete
-
 namespace RPGStatSystem {
 
     class RPGDefaultCollection : public RPGStatCollection {

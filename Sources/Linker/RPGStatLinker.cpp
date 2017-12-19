@@ -7,12 +7,8 @@
 RPGStatSystem::RPGStatLinker::RPGStatLinker(RPGStatSystem::RPGStat* stat)
         : m_linkedStat(stat)
 {
-    IStatValueEvent* iValueChange = dynamic_cast<IStatValueEvent *>(stat);
+    IStatValueChange* iValueChange = dynamic_cast<IStatValueChange *>(stat);
     if (iValueChange)
-        iValueChange->OnValueChange += &m_eventHandler->LOnLinkedStatValueChange;
-}
-
-System::EventHandler *RPGStatSystem::RPGStatLinker::getEventHandler() const
-{
-    return m_eventHandler;
+        ; // TODO fix
+        //iValueChange->OnValueChange += &m_eventHandler->LOnLinkedStatValueChange;
 }

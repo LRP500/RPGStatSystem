@@ -9,15 +9,15 @@
 
 #include "../RPGStat.hpp"
 #include "../../Interface/IStatModifiable.hpp"
-#include "../../Interface/IStatValueEvent.hpp"
-#include "../../Event/EventHandler.hpp"
+#include "../../Interface/IStatValueChange.hpp"
+#include "../../System/Event/Event.hpp"
 
 namespace RPGStatSystem
 {
 
-    class RPGStatModifiable: public RPGStat, public IStatModifiable, public IStatValueEvent {
+    class RPGStatModifiable: public RPGStat, public IStatModifiable, public IStatValueChange {
     private:
-        std::list<RPGStatSystem::RPGStatModifier> m_mods;
+        std::list<RPGStatSystem::RPGStatModifier*> m_mods;
         int m_modValue;
 
     public:
@@ -27,14 +27,16 @@ namespace RPGStatSystem
         int getModifierValue() const override { return m_modValue; }
 
         // Interface Overrides
-        void addModifier(const RPGStatModifier& mod) override;
+        void addModifier(RPGStatModifier* mod) override;
+        void removeModifier(RPGStatModifier* mod) override;
         void clearModifiers() override;
         void updateModifiers() override;
 
         void triggerValueChange();
 
-        // Implement IStatValueEvent Interface
-        System::EventHandler* getEventHandler() const override;
+        // Implement IStatValueChange Interface
+        void OnModValueChange(const RPGStatModifier& sender);
+        LISTENER(RPGStatModifiable, OnModValueChange, const RPGStatModifier&)
     };
 
 }

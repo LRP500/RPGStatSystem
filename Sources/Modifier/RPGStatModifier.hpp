@@ -6,36 +6,30 @@
 #define RPGSTATSYSTEM_RPGSTATMODIFIER_HPP
 
 #include "../Collection/RPGStatCollection.hpp"
+#include "../System/Event/Event.hpp"
 
 namespace RPGStatSystem {
 
     class RPGStatModifier {
     public:
-        enum Type {
-            None,
-            BaseValuePercent,
-            BaseValueAdd,
-            TotalValuePercent,
-            TotalValueAdd,
-        };
+        System::Event<const RPGStatModifier&> OnValueChange;
 
-    private:
+    protected:
         float m_value;
-        Type m_modifierType;
-        RPGStat::Type m_statType;
+        bool m_stacks;
+        int m_order;
 
     public:
-        RPGStatModifier();
-        RPGStatModifier(RPGStat::Type statType, Type modifierType, float value);
+        explicit RPGStatModifier(float value, bool stacks);
         ~RPGStatModifier() = default;
 
+        bool stacks() const { return m_stacks; }
         float getValue() const { return m_value; }
-        Type getModifierType() const { return m_modifierType; }
-        RPGStat::Type getStatType() const { return m_statType; }
+        void setValue(float value);
+        void triggerValueChange();
 
-        void setValue(float value) { m_value = value; }
-        void setModifierType(Type type) { m_modifierType = type; }
-        void setStatType(RPGStat::Type type) { m_statType = type; }
+        virtual int getOrder() const = 0;
+        virtual int applyModifier(int statValue, float modValue) = 0;
     };
 
 }

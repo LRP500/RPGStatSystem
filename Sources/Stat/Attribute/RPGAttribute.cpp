@@ -5,6 +5,7 @@
 #include "RPGAttribute.hpp"
 
 RPGStatSystem::RPGAttribute::RPGAttribute()
+        : LOnLinkerValueChange(this)
 {}
 
 int RPGStatSystem::RPGAttribute::getBaseValue() const
@@ -21,7 +22,7 @@ void RPGStatSystem::RPGAttribute::clearLinkers()
 {
     for (const auto& linker : m_linkers)
     {
-        linker->OnValueChange -= &m_eventHandler->LOnLinkerValueChange;
+        linker->OnValueChange -= &LOnLinkerValueChange;
     }
     m_linkers.clear();
 }
@@ -45,5 +46,10 @@ void RPGStatSystem::RPGAttribute::scaleToLevel(int level)
 void RPGStatSystem::RPGAttribute::removeLinker(RPGStatSystem::RPGStatLinker *linker)
 {
     m_linkers.remove(linker);
-    linker->OnValueChange -= &m_eventHandler->LOnLinkerValueChange;
+    linker->OnValueChange -= &LOnLinkerValueChange;
+}
+
+void RPGStatSystem::RPGAttribute::OnLinkerValueChange(const RPGStatSystem::RPGStat& sender)
+{
+    updateLinkers();
 }

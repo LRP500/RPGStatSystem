@@ -42,6 +42,9 @@ namespace RPGStatSystem {
             RPGStatModifiable::updateModifiers();
             return const_cast<const RPGAttribute*>(this)->getLinkerValue();
         }
+
+        void OnLinkerValueChange(const RPGStat& sender);
+        LISTENER(RPGAttribute, OnLinkerValueChange, const RPGStat&)
     };
 
 }

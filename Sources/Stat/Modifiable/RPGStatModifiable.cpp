@@ -3,60 +3,73 @@
 //
 
 #include "RPGStatModifiable.hpp"
+#include "../../System/optimized_inserter.h"
+
+using std::min;
 
 RPGStatSystem::RPGStatModifiable::RPGStatModifiable()
-        : RPGStat(), m_modValue(0)
+        : RPGStat(), m_modValue{0}, LOnModValueChange(this)
 {}
 
-void RPGStatSystem::RPGStatModifiable::addModifier(const RPGStatModifier& mod)
+void RPGStatSystem::RPGStatModifiable::addModifier(RPGStatModifier* mod)
 {
     m_mods.emplace_back(mod);
+    mod->OnValueChange += &LOnModValueChange;
+}
+
+void RPGStatSystem::RPGStatModifiable::removeModifier(RPGStatModifier* mod)
+{
+    mod->OnValueChange -= &LOnModValueChange;
+    m_mods.remove(mod);
 }
 
 void RPGStatSystem::RPGStatModifiable::clearModifiers()
 {
+    for (auto& mod : m_mods)
+    {
+        mod->OnValueChange -= &LOnModValueChange;
+    }
     m_mods.clear();
 }
 
 void RPGStatSystem::RPGStatModifiable::updateModifiers()
 {
+    float sum, max;
     m_modValue = 0;
-    float modBaseValueAdd = 0;
-    float modBaseValuePercent = 0;
-    float modTotalValueAdd = 0;
-    float modTotalValuePercent = 0;
+    std::unordered_map<int, std::vector<RPGStatSystem::RPGStatModifier*>> groupOrder;
+    m_mods.sort([](const RPGStatModifier* lhs, const RPGStatModifier* rhs) { return lhs->getOrder() < rhs->getOrder(); });
+    std::for_each(m_mods.begin(), m_mods.end(), System::optimized_inserter<RPGStatModifier*>(groupOrder));
 
-    for (const auto& mod : m_mods)
+    for (auto& group : groupOrder)
     {
-        switch (mod.getModifierType())
+        sum = max = 0;
+        for (auto& mod : group.second)
         {
-            case RPGStatModifier::None: break;
-            case RPGStatModifier::BaseValueAdd:
-                modBaseValueAdd += mod.getValue();
-                break;
-            case RPGStatModifier::BaseValuePercent:
-                modBaseValuePercent += mod.getValue();
-                break;
-            case RPGStatModifier::TotalValueAdd:
-                modTotalValueAdd += mod.getValue();
-                break;
-            case RPGStatModifier::TotalValuePercent:
-                modTotalValuePercent += mod.getValue();
-                break;
+            if (!mod->stacks())
+            {
+                if(mod->getValue() > max)
+                {
+                    max = mod->getValue();
+                }
+            }
+            else
+            {
+                sum += mod->getValue();
+            }
         }
+        m_modValue += group.second[0]->applyModifier(getBaseValue() + getModifierValue(), sum > max ? sum : max);
     }
-    m_modValue = static_cast<int>((getBaseValue() * modBaseValuePercent) + modBaseValueAdd);
-    m_modValue += (getValue() * modTotalValuePercent) + modTotalValueAdd;
-    triggerValueChange();
-}
 
-System::EventHandler* RPGStatSystem::RPGStatModifiable::getEventHandler() const
-{
-    return m_eventHandler;
+    triggerValueChange();
 }
 
 void RPGStatSystem::RPGStatModifiable::triggerValueChange()
 {
-    // TODO check if event register to delegate
+    // TODO check if event registered to delegate
     OnValueChange(*this);
+}
+
+void RPGStatSystem::RPGStatModifiable::OnModValueChange(const RPGStatSystem::RPGStatModifier& sender)
+{
+    updateModifiers();
 }
