@@ -47,6 +47,66 @@ bool RPGStatCollection::contains(RPGStat::Type type) const
     return static_cast<bool>(m_stats.count(type));
 }
 
+void RPGStatCollection::addStatModifier(RPGStat::Type target, RPGStatModifier* mod, bool update)
+{
+    if (contains(target))
+    {
+        auto modStat = dynamic_cast<IStatModifiable*>(getStat<RPGStat>(target));
+        if (modStat)
+        {
+            modStat->addModifier(mod);
+            if (update)
+            {
+                modStat->updateModifiers();
+            }
+        }
+    }
+}
+
+void RPGStatSystem::RPGStatCollection::clearStatModifiers(RPGStat::Type type, bool update)
+{
+    if (contains(type))
+    {
+        auto modStat = dynamic_cast<IStatModifiable*>(getStat(type));
+        if (modStat)
+        {
+            modStat->clearModifiers();
+            if (update)
+            {
+                modStat->updateModifiers();
+            }
+        }
+    }
+}
+
+void RPGStatCollection::clearAllStatModifiers(bool update)
+{
+    for (const auto& stat : m_stats)
+    {
+        clearStatModifiers(stat.first, update);
+    }
+}
+
+void RPGStatCollection::updateStatModifier(RPGStat::Type type)
+{
+    if (contains(type))
+    {
+        auto modStat = dynamic_cast<IStatModifiable*>(getStat(type));
+        if (modStat)
+        {
+            modStat->updateModifiers();
+        }
+    }
+}
+
+void RPGStatCollection::updateAllStatModifiers()
+{
+    for (const auto& stat : m_stats)
+    {
+        updateStatModifier(stat.first);
+    }
+}
+
 template RPGStat* RPGStatCollection::getStat<RPGStat>(RPGStat::Type type);
 template RPGStatModifiable* RPGStatCollection::getStat<RPGStatModifiable>(RPGStat::Type type);
 template RPGAttribute* RPGStatCollection::getStat<RPGAttribute>(RPGStat::Type type);

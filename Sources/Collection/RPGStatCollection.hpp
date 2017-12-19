@@ -8,6 +8,7 @@
 #include <unordered_map>
 
 #include "../Stat/RPGStat.hpp"
+#include "../Modifier/RPGStatModifier.hpp"
 
 namespace RPGStatSystem {
 
@@ -31,6 +32,12 @@ namespace RPGStatSystem {
 
         template <typename T>
         T* getOrCreate(RPGStat::Type type);
+
+        void addStatModifier(RPGStat::Type target, RPGStatModifier* mod, bool update = false);
+        void clearStatModifiers(RPGStat::Type type, bool update = false);
+        void clearAllStatModifiers(bool update = false);
+        void updateStatModifier(RPGStat::Type type);
+        void updateAllStatModifiers();
     };
 
 }
