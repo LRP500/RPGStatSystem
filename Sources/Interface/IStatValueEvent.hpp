@@ -5,8 +5,7 @@
 #ifndef RPGSTATSYSTEM_ISTATVALUECHANGE_HPP
 #define RPGSTATSYSTEM_ISTATVALUECHANGE_HPP
 
-#include "../Event/Event.hpp"
-#include "../Event/EventHandler.hpp"
+#include "../System/Event/EventHandler.hpp"
 
 namespace RPGStatSystem
 {

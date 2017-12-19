@@ -5,7 +5,7 @@
 #ifndef RPGSTATSYSTEM_ISTATCURRENTVALUECHANGE_HPP
 #define RPGSTATSYSTEM_ISTATCURRENTVALUECHANGE_HPP
 
-#include "../Event/Event.hpp"
+#include "../System/Event/Event.hpp"
 #include "../Stat/RPGStat.hpp"
 
 namespace RPGStatSystem

@@ -10,14 +10,14 @@
 #include "../RPGStat.hpp"
 #include "../../Interface/IStatModifiable.hpp"
 #include "../../Interface/IStatValueEvent.hpp"
-#include "../../Event/EventHandler.hpp"
+#include "../../System/Event/EventHandler.hpp"
 
 namespace RPGStatSystem
 {
 
     class RPGStatModifiable: public RPGStat, public IStatModifiable, public IStatValueEvent {
     private:
-        std::list<RPGStatSystem::RPGStatModifier> m_mods;
+        std::list<RPGStatSystem::RPGStatModifier*> m_mods;
         int m_modValue;
 
     public:
@@ -27,7 +27,8 @@ namespace RPGStatSystem
         int getModifierValue() const override { return m_modValue; }
 
         // Interface Overrides
-        void addModifier(const RPGStatModifier& mod) override;
+        void addModifier(RPGStatModifier* mod) override;
+        void removeModifier(RPGStatModifier* mod) override;
         void clearModifiers() override;
         void updateModifiers() override;
 

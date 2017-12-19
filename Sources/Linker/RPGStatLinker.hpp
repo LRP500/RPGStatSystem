@@ -6,7 +6,7 @@
 #define RPGSTATSYSTEM_RPGSTATLINKER_HPP
 
 #include "../Stat/RPGStat.hpp"
-#include "../Event/EventHandler.hpp"
+#include "../System/Event/EventHandler.hpp"
 #include "../Interface/IStatValueEvent.hpp"
 
 namespace RPGStatSystem {

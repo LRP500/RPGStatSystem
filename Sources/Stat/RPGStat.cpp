@@ -4,5 +4,5 @@
 
 #include "RPGStat.hpp"
 
-RPGStatSystem::RPGStat::RPGStat() : m_name(""), m_baseValue(0)
+RPGStatSystem::RPGStat::RPGStat() : m_name{""}, m_baseValue{0}
 {}

@@ -6,16 +6,21 @@
 
 using RPGStatSystem::RPGStatModifier;
 
-RPGStatModifier::RPGStatModifier()
-        : m_statType(RPGStat::Type::None),
-          m_modifierType(RPGStatModifier::Type::None),
-          m_value(0)
+RPGStatModifier::RPGStatModifier(float value, bool stacks)
+        : m_value(value), m_stacks(stacks)
 {}
 
-RPGStatModifier::RPGStatModifier(RPGStat::Type statType,
-                                 RPGStatModifier::Type modifierType,
-                                 float value)
-        : m_statType(statType),
-          m_modifierType(modifierType),
-          m_value(value)
-{}
+void RPGStatSystem::RPGStatModifier::setValue(float value)
+{
+    if (value != m_value)
+    {
+        m_value = value;
+        triggerValueChange();
+    }
+}
+
+void RPGStatSystem::RPGStatModifier::triggerValueChange()
+{
+    // TODO check if event register to delegate
+    OnValueChange(*this);
+}

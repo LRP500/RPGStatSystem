@@ -17,8 +17,13 @@ add_executable(RPGStatSystem
         Sources/Linker/RPGRatioLinker.cpp Sources/Linker/RPGRatioLinker.hpp
         Sources/Interface/IStatLinkable.hpp
         Sources/Stat/Vital/RPGVital.cpp Sources/Stat/Vital/RPGVital.hpp
-        Sources/Event/EventHandler.cpp Sources/Event/EventHandler.hpp
-        Sources/Event/Delegate.hpp
-        Sources/Event/Event.hpp
+        Sources/System/Event/EventHandler.cpp Sources/System/Event/EventHandler.hpp
+        Sources/System/Event/Delegate.hpp
+        Sources/System/Event/Event.hpp
         Sources/Interface/IStatValueEvent.hpp
-        Sources/Interface/IStatCurrentValueEvent.hpp)
+        Sources/Interface/IStatCurrentValueEvent.hpp
+        Sources/Modifier/Mods/RPGStatModBasePercent.cpp Sources/Modifier/Mods/RPGStatModBasePercent.hpp
+        Sources/Modifier/Mods/RPGStatModBaseAdd.cpp Sources/Modifier/Mods/RPGStatModBaseAdd.hpp
+        Sources/Modifier/Mods/RPGStatModTotalPercent.cpp Sources/Modifier/Mods/RPGStatModTotalPercent.hpp
+        Sources/Modifier/Mods/RPGStatModTotalAdd.cpp Sources/Modifier/Mods/RPGStatModTotalAdd.hpp
+        Sources/System/optimized_inserter.h)
