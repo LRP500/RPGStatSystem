@@ -67,7 +67,7 @@ void RPGStatSystem::RPGStatCollection::clearStatModifiers(RPGStat::Type type, bo
 {
     if (contains(type))
     {
-        auto modStat = dynamic_cast<IStatModifiable*>(getStat(type));
+        auto modStat = dynamic_cast<IStatModifiable*>(getStat<RPGStat>(type));
         if (modStat)
         {
             modStat->clearModifiers();
@@ -91,7 +91,7 @@ void RPGStatCollection::updateStatModifier(RPGStat::Type type)
 {
     if (contains(type))
     {
-        auto modStat = dynamic_cast<IStatModifiable*>(getStat(type));
+        auto modStat = dynamic_cast<IStatModifiable*>(getStat<RPGStat>(type));
         if (modStat)
         {
             modStat->updateModifiers();
