@@ -5,7 +5,6 @@
 #ifndef RPGSTATSYSTEM_RPGSTATMODIFIER_HPP
 #define RPGSTATSYSTEM_RPGSTATMODIFIER_HPP
 
-#include "../Collection/RPGStatCollection.hpp"
 #include "../System/Event/Event.hpp"
 
 namespace RPGStatSystem {
