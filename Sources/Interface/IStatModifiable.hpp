@@ -10,10 +10,12 @@
 namespace RPGStatSystem {
 
     class IStatModifiable {
-    private:
-        virtual void addModifier(const RPGStatModifier& mod) = 0;
-        virtual void clearModifiers() = 0;
+    public:
+        virtual void addModifier(RPGStatModifier* mod) = 0;
         virtual void updateModifiers() = 0;
+        virtual void clearModifiers() = 0;
+    private:
+        virtual void removeModifier(RPGStatModifier* mod) = 0;
         virtual int getModifierValue() const = 0;
     };
 

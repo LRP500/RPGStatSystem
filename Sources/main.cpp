@@ -5,6 +5,8 @@
 #include "Interface/IStatScalable.hpp"
 #include "Stat/Attribute/RPGAttribute.hpp"
 #include "Stat/Vital/RPGVital.hpp"
+#include "Modifier/Mods/RPGStatModBaseAdd.hpp"
+#include "Modifier/Mods/RPGStatModBasePercent.hpp"
 
 using namespace RPGStatSystem;
 
@@ -32,10 +34,10 @@ int main()
     std::cout << "\nStat Modifiers\n================" << std::endl;
     if (dynamic_cast<IStatModifiable *>(agility))
         std::cout << "IStatModifiable correctly implemented" << std::endl;
-    agility->addModifier(RPGStatModifier(RPGStat::Type::Agility, RPGStatModifier::Type::BaseValueAdd, 100.0));
+    agility->addModifier(new RPGStatModBaseAdd(100.0));
     agility->updateModifiers();
     std::cout << "Add " << agility->getModifierValue() << " to agility base value" << "\n";
-    strength->addModifier(RPGStatModifier(RPGStat::Type::Strength, RPGStatModifier::Type::BaseValuePercent, 10.0));
+    strength->addModifier(new RPGStatModBasePercent(10.0));
     strength->updateModifiers();
     std::cout << "Add Percentage 10.0 (1000%) to " << strength->getName() << "\n";
     std::cout << "[" << agility->getName() << "=" << agility->getValue() << "]" << std::endl;
