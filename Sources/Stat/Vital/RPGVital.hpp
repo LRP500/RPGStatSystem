@@ -6,13 +6,13 @@
 #define RPGSTATSYSTEM_RPGVITAL_HPP
 
 #include "../../Stat/Attribute/RPGAttribute.hpp"
-#include "../../Interface/IStatCurrentValueEvent.hpp"
+#include "../../Interface/IStatCurrentValueChange.hpp"
 #include "../../System/Event/Event.hpp"
 
 namespace RPGStatSystem
 {
 
-    class RPGVital : public RPGAttribute, public IStatCurrentValueEvent {
+    class RPGVital : public RPGAttribute, public IStatCurrentValueChange {
     private:
         int m_currentValue {0};
 

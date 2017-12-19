@@ -8,18 +8,18 @@
 using std::min;
 
 RPGStatSystem::RPGStatModifiable::RPGStatModifiable()
-        : RPGStat(), m_modValue{0}
+        : RPGStat(), m_modValue{0}, LOnModValueChange(this)
 {}
 
 void RPGStatSystem::RPGStatModifiable::addModifier(RPGStatModifier* mod)
 {
     m_mods.emplace_back(mod);
-    mod->OnValueChange += &m_eventHandler->LOnModifierValueChange;
+    mod->OnValueChange += &LOnModValueChange;
 }
 
 void RPGStatSystem::RPGStatModifiable::removeModifier(RPGStatModifier* mod)
 {
-    mod->OnValueChange -= &m_eventHandler->LOnModifierValueChange;
+    mod->OnValueChange -= &LOnModValueChange;
     m_mods.remove(mod);
 }
 
@@ -27,7 +27,7 @@ void RPGStatSystem::RPGStatModifiable::clearModifiers()
 {
     for (auto& mod : m_mods)
     {
-        mod->OnValueChange -= &m_eventHandler->LOnModifierValueChange;
+        mod->OnValueChange -= &LOnModValueChange;
     }
     m_mods.clear();
 }
@@ -63,13 +63,13 @@ void RPGStatSystem::RPGStatModifiable::updateModifiers()
     triggerValueChange();
 }
 
-System::EventHandler* RPGStatSystem::RPGStatModifiable::getEventHandler() const
-{
-    return m_eventHandler;
-}
-
 void RPGStatSystem::RPGStatModifiable::triggerValueChange()
 {
-    // TODO check if event register to delegate
+    // TODO check if event registered to delegate
     OnValueChange(*this);
+}
+
+void RPGStatSystem::RPGStatModifiable::OnModValueChange(const RPGStatSystem::RPGStatModifier& sender)
+{
+    updateModifiers();
 }

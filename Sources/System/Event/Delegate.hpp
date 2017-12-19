@@ -6,7 +6,7 @@
 #define EVENTHANDLER_DELEGATE_HPP
 
 #define LISTENER(thisType, handler, type)\
-    class __L##handler##__ : public Delegate< type >\
+    class __L##handler##__ : public System::Delegate< type >\
     {\
         public:\
             __L##handler##__ ( thisType * obj )\

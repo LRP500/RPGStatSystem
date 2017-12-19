@@ -6,13 +6,12 @@
 #define RPGSTATSYSTEM_RPGSTATMODIFIER_HPP
 
 #include "../Collection/RPGStatCollection.hpp"
-#include "../System/Event/EventHandler.hpp"
+#include "../System/Event/Event.hpp"
 
 namespace RPGStatSystem {
 
     class RPGStatModifier {
     public:
-        System::EventHandler* m_eventHandler;
         System::Event<const RPGStatModifier&> OnValueChange;
 
     protected:

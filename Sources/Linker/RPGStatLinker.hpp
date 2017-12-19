@@ -6,12 +6,12 @@
 #define RPGSTATSYSTEM_RPGSTATLINKER_HPP
 
 #include "../Stat/RPGStat.hpp"
-#include "../System/Event/EventHandler.hpp"
-#include "../Interface/IStatValueEvent.hpp"
+#include "../System/Event/Event.hpp"
+#include "../Interface/IStatValueChange.hpp"
 
 namespace RPGStatSystem {
 
-    class RPGStatLinker : public IStatValueEvent {
+    class RPGStatLinker : public IStatValueChange {
     protected:
         RPGStat *m_linkedStat;
         int m_value;
@@ -22,9 +22,6 @@ namespace RPGStatSystem {
 
         RPGStat* getStat() const { return m_linkedStat; }
         virtual int getValue() const { return m_value; }
-
-        // Implement IStatValueEvent Interface
-        System::EventHandler* getEventHandler() const override;
     };
 
 }
