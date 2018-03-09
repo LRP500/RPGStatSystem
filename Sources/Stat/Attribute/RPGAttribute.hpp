@@ -44,7 +44,7 @@ namespace RPGStatSystem {
         }
 
         void OnLinkerValueChange(const RPGStat& sender);
-        LISTENER(RPGAttribute, OnLinkerValueChange, const RPGStat&)
+//        LISTENER(RPGAttribute, OnLinkerValueChange, const RPGStat&)
     };
 
 }

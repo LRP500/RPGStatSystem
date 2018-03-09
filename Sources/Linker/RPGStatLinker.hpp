@@ -6,7 +6,7 @@
 #define RPGSTATSYSTEM_RPGSTATLINKER_HPP
 
 #include "../Stat/RPGStat.hpp"
-#include "../System/Event/Event.hpp"
+//#include "../System/Event/Event.hpp"
 #include "../Interface/IStatValueChange.hpp"
 
 namespace RPGStatSystem {
@@ -24,7 +24,7 @@ namespace RPGStatSystem {
         virtual int getValue() const { return m_value; }
 
         void OnLinkedStatValueChange(const RPGStat& sender);
-        LISTENER(RPGStatLinker, OnLinkedStatValueChange, const RPGStat&);
+//        LISTENER(RPGStatLinker, OnLinkedStatValueChange, const RPGStat&);
     };
 
 }

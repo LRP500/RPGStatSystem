@@ -5,13 +5,13 @@
 #ifndef RPGSTATSYSTEM_RPGSTATMODIFIER_HPP
 #define RPGSTATSYSTEM_RPGSTATMODIFIER_HPP
 
-#include "../System/Event/Event.hpp"
+//#include "../System/Event/Event.hpp"
 
 namespace RPGStatSystem {
 
     class RPGStatModifier {
-    public:
-        System::Event<const RPGStatModifier&> OnValueChange;
+//    public:
+//        System::Event<const RPGStatModifier&> OnValueChange;
 
     protected:
         float m_value;

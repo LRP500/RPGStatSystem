@@ -5,11 +5,13 @@
 #include "RPGStatLinker.hpp"
 
 RPGStatSystem::RPGStatLinker::RPGStatLinker(RPGStatSystem::RPGStat* stat)
-        : m_linkedStat(stat), LOnLinkedStatValueChange(this)
+        : m_linkedStat(stat)
+//        , LOnLinkedStatValueChange(this)
 {
+    // Check if given linked stat is valid & set link
     auto iValueChange = dynamic_cast<IStatValueChange *>(stat);
-    if (iValueChange)
-        iValueChange->OnValueChange += &LOnLinkedStatValueChange;
+//    if (iValueChange)
+//        iValueChange->OnValueChange += &LOnLinkedStatValueChange;
 }
 
 void RPGStatSystem::RPGStatLinker::OnLinkedStatValueChange(const RPGStatSystem::RPGStat &sender)

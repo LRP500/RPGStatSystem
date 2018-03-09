@@ -8,18 +8,19 @@
 using std::min;
 
 RPGStatSystem::RPGStatModifiable::RPGStatModifiable()
-        : RPGStat(), m_modValue{0}, LOnModValueChange(this)
+        : RPGStat(), m_modValue{0}
+//        , LOnModValueChange(this)
 {}
 
 void RPGStatSystem::RPGStatModifiable::addModifier(RPGStatModifier* mod)
 {
     m_mods.emplace_back(mod);
-    mod->OnValueChange += &LOnModValueChange;
+//    mod->OnValueChange += &LOnModValueChange;
 }
 
 void RPGStatSystem::RPGStatModifiable::removeModifier(RPGStatModifier* mod)
 {
-    mod->OnValueChange -= &LOnModValueChange;
+//    mod->OnValueChange -= &LOnModValueChange;
     m_mods.remove(mod);
 }
 
@@ -27,7 +28,7 @@ void RPGStatSystem::RPGStatModifiable::clearModifiers()
 {
     for (auto& mod : m_mods)
     {
-        mod->OnValueChange -= &LOnModValueChange;
+//        mod->OnValueChange -= &LOnModValueChange;
     }
     m_mods.clear();
 }
@@ -66,7 +67,7 @@ void RPGStatSystem::RPGStatModifiable::updateModifiers()
 void RPGStatSystem::RPGStatModifiable::triggerValueChange()
 {
     // TODO check if event registered to delegate
-    OnValueChange(*this);
+//    OnValueChange(*this);
 }
 
 void RPGStatSystem::RPGStatModifiable::OnModValueChange(const RPGStatSystem::RPGStatModifier& sender)

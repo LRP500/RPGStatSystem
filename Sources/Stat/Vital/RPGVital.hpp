@@ -7,7 +7,7 @@
 
 #include "../../Stat/Attribute/RPGAttribute.hpp"
 #include "../../Interface/IStatCurrentValueChange.hpp"
-#include "../../System/Event/Event.hpp"
+//#include "../../System/Event/Event.hpp"
 
 namespace RPGStatSystem
 {
