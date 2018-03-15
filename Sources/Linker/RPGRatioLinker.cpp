@@ -4,8 +4,6 @@
 
 #include "RPGRatioLinker.hpp"
 
-RPGStatSystem::RPGRatioLinker::RPGRatioLinker(RPGStatSystem::RPGStat* stat,
-                                              float ratio)
-        : RPGStatLinker(stat),
-          m_ratio(ratio)
+RPGStatSystem::RPGRatioLinker::RPGRatioLinker(RPGStatSystem::RPGStat* stat, float ratio)
+        : RPGStatLinker(stat), m_ratio(ratio)
 {}

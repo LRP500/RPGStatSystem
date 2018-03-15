@@ -10,11 +10,9 @@
 #include "../RPGStat.hpp"
 #include "../../Interface/IStatModifiable.hpp"
 #include "../../Interface/IStatValueChange.hpp"
-//#include "../../System/Event/Event.hpp"
 
 namespace RPGStatSystem
 {
-
     class RPGStatModifiable: public RPGStat, public IStatModifiable, public IStatValueChange {
     private:
         std::list<RPGStatSystem::RPGStatModifier*> m_mods;
@@ -36,7 +34,6 @@ namespace RPGStatSystem
 
         // Implement IStatValueChange Interface
         void OnModValueChange(const RPGStatModifier& sender);
-//        LISTENER(RPGStatModifiable, OnModValueChange, const RPGStatModifier&)
     };
 
 }

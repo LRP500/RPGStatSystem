@@ -6,14 +6,18 @@
 #define RPGSTATSYSTEM_RPGSTATLINKER_HPP
 
 #include "../Stat/RPGStat.hpp"
-//#include "../System/Event/Event.hpp"
 #include "../Interface/IStatValueChange.hpp"
 
-namespace RPGStatSystem {
-
+namespace RPGStatSystem
+{
+    // Linker is attached to SLAVE stat and listening to MASTER stat.
+    // MASTER stat modified => broadcast to LINKER  => broadcast to SLAVE
     class RPGStatLinker : public IStatValueChange {
+    public:
+        std::vector<token> listenTokens;
+
     protected:
-        RPGStat *m_linkedStat;
+        RPGStat *m_linkedStat; // Pointer to MASTER class
         int m_value;
 
     public:
@@ -23,10 +27,8 @@ namespace RPGStatSystem {
         RPGStat* getStat() const { return m_linkedStat; }
         virtual int getValue() const { return m_value; }
 
-        void OnLinkedStatValueChange(const RPGStat& sender);
-//        LISTENER(RPGStatLinker, OnLinkedStatValueChange, const RPGStat&);
+        void OnLinkedStatValueChange(const RPGStatLinker&);
     };
-
 }
 
 #endif //RPGSTATSYSTEM_RPGSTATLINKER_HPP

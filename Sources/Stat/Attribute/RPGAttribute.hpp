@@ -43,8 +43,7 @@ namespace RPGStatSystem {
             return const_cast<const RPGAttribute*>(this)->getLinkerValue();
         }
 
-        void OnLinkerValueChange(const RPGStat& sender);
-//        LISTENER(RPGAttribute, OnLinkerValueChange, const RPGStat&)
+        void OnLinkerValueChange(const RPGStatLinker& sender);
     };
 
 }

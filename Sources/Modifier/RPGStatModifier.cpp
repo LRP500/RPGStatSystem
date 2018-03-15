@@ -21,6 +21,6 @@ void RPGStatSystem::RPGStatModifier::setValue(float value)
 
 void RPGStatSystem::RPGStatModifier::triggerValueChange()
 {
-    // TODO check if event register to delegate
-//    OnValueChange(*this);
+    if (!listenTokens.empty())
+     OnValueChange(*this);
 }

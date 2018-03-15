@@ -5,7 +5,6 @@
 #include "RPGAttribute.hpp"
 
 RPGStatSystem::RPGAttribute::RPGAttribute()
-//        : LOnLinkerValueChange(this)
 {}
 
 int RPGStatSystem::RPGAttribute::getBaseValue() const
@@ -16,25 +15,27 @@ int RPGStatSystem::RPGAttribute::getBaseValue() const
 void RPGStatSystem::RPGAttribute::addLinker(RPGStatSystem::RPGStatLinker* linker)
 {
     m_linkers.emplace_back(linker);
+    // Subscribe to linker callback. Any change on master stat will trigger a
+    // recalculation of linkers value and trigger slave stat update
+    linker->listenTokens.push_back(linker->OnLinkValueChange.attach([this] (const RPGStatLinker& l) {
+        OnLinkerValueChange(l);
+    }));
 }
 
 void RPGStatSystem::RPGAttribute::clearLinkers()
 {
-    for (const auto& linker : m_linkers)
-    {
-//        linker->OnValueChange -= &LOnLinkerValueChange;
-    }
     m_linkers.clear();
 }
 
 void RPGStatSystem::RPGAttribute::updateLinkers()
 {
-    m_linkerValue = 0;
+    int newLinkerValue = 0;
     for (const auto& link : m_linkers)
     {
-        m_linkerValue += link->getValue();
+        newLinkerValue += link->getValue();
     }
-    triggerValueChange();
+    if (newLinkerValue != m_linkerValue)
+        triggerValueChange(); // Will notify slave stat
 }
 
 void RPGStatSystem::RPGAttribute::scaleToLevel(int level)
@@ -46,10 +47,9 @@ void RPGStatSystem::RPGAttribute::scaleToLevel(int level)
 void RPGStatSystem::RPGAttribute::removeLinker(RPGStatSystem::RPGStatLinker *linker)
 {
     m_linkers.remove(linker);
-//    linker->OnValueChange -= &LOnLinkerValueChange;
 }
 
-void RPGStatSystem::RPGAttribute::OnLinkerValueChange(const RPGStatSystem::RPGStat& sender)
+void RPGStatSystem::RPGAttribute::OnLinkerValueChange(const RPGStatSystem::RPGStatLinker& sender)
 {
     updateLinkers();
 }

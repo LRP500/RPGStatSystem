@@ -7,8 +7,9 @@
 
 #include "../Modifier/RPGStatModifier.hpp"
 
-namespace RPGStatSystem {
-
+namespace RPGStatSystem
+{
+    // Interface defining stat modifiable behavior
     class IStatModifiable {
     public:
         virtual void addModifier(RPGStatModifier* mod) = 0;

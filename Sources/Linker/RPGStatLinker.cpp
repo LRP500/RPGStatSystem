@@ -4,19 +4,21 @@
 
 #include "RPGStatLinker.hpp"
 
-RPGStatSystem::RPGStatLinker::RPGStatLinker(RPGStatSystem::RPGStat* stat)
-        : m_linkedStat(stat)
-//        , LOnLinkedStatValueChange(this)
+RPGStatSystem::RPGStatLinker::RPGStatLinker(RPGStatSystem::RPGStat* stat) : m_linkedStat(stat)
 {
-    // Check if given linked stat is valid & set link
+    // Checks if master stat is modifiable
     auto iValueChange = dynamic_cast<IStatValueChange *>(stat);
-//    if (iValueChange)
-//        iValueChange->OnValueChange += &LOnLinkedStatValueChange;
+    // If it is, then subscribe master stat to the linker callback
+    if (iValueChange)
+        iValueChange->listenTokens.push_back(iValueChange->OnLinkValueChange.attach([this] (const RPGStatLinker& l) {
+            OnLinkedStatValueChange(l);
+        }));
 }
 
-void RPGStatSystem::RPGStatLinker::OnLinkedStatValueChange(const RPGStatSystem::RPGStat &sender)
+// Notifies slave stat of master stat's changes and communicates value
+void RPGStatSystem::RPGStatLinker::OnLinkedStatValueChange(const RPGStatSystem::RPGStatLinker& linker)
 {
-    // TODO Variadic templates support for Event
-    // this won't work cause OnValueChange currently take RPGStat as 1st argument
-    //OnValueChange(*this);
+    // Callback should receive value trough args
+    if (!listenTokens.empty())
+        OnLinkValueChange(*this);
 }

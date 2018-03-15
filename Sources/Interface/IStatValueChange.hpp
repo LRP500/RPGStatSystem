@@ -5,17 +5,22 @@
 #ifndef RPGSTATSYSTEM_ISTATVALUECHANGE_HPP
 #define RPGSTATSYSTEM_ISTATVALUECHANGE_HPP
 
-//#include "../System/Event/Event.hpp"
-//#include "../System/Event/Delegate.hpp"
+#include "../System/Broadcaster.hpp"
 
+namespace  RPGStatSystem
+{
+    class RPGStatLinker;
+}
+
+// Broadcast interface for modifiable stat (RPGStatModifiable, RPGAttribute)
 namespace RPGStatSystem
 {
-
     class IStatValueChange {
     public:
-//        System::Event<const RPGStat&> OnValueChange;
+        System::Broadcaster<const RPGStat&> OnValueChange;
+        System::Broadcaster<const RPGStatLinker&> OnLinkValueChange;
+        std::vector<token> listenTokens;
     };
-
 }
 
 #endif //RPGSTATSYSTEM_ISTATVALUECHANGE_HPP
